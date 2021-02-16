@@ -16,6 +16,8 @@
 		2C6EBB6F2590DCE000036334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C6EBB6D2590DCE000036334 /* LaunchScreen.storyboard */; };
 		2C6EBB7A2590DCE000036334 /* HandsOnMapKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6EBB792590DCE000036334 /* HandsOnMapKitTests.swift */; };
 		2C6EBB852590DCE000036334 /* HandsOnMapKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6EBB842590DCE000036334 /* HandsOnMapKitUITests.swift */; };
+		2CC1991E2591A03A0015670C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC1991D2591A03A0015670C /* MainViewController.swift */; };
+		2CC1992B2591AB4E0015670C /* Extension+Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC1992A2591AB4E0015670C /* Extension+Double.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		2C6EBB802590DCE000036334 /* HandsOnMapKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandsOnMapKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6EBB842590DCE000036334 /* HandsOnMapKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandsOnMapKitUITests.swift; sourceTree = "<group>"; };
 		2C6EBB862590DCE000036334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CC1991D2591A03A0015670C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2CC1992A2591AB4E0015670C /* Extension+Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Double.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +105,11 @@
 		2C6EBB5E2590DCE000036334 /* HandsOnMapKit */ = {
 			isa = PBXGroup;
 			children = (
+				2CC1991925919AE10015670C /* Controller */,
+				2CC1991825919AD50015670C /* View */,
+				2CC1991725919ACB0015670C /* Model */,
 				2C6EBB5F2590DCE000036334 /* AppDelegate.swift */,
 				2C6EBB612590DCE000036334 /* SceneDelegate.swift */,
-				2C6EBB632590DCE000036334 /* ViewController.swift */,
-				2C6EBB652590DCE000036334 /* Main.storyboard */,
 				2C6EBB6B2590DCE000036334 /* Assets.xcassets */,
 				2C6EBB6D2590DCE000036334 /* LaunchScreen.storyboard */,
 				2C6EBB702590DCE000036334 /* Info.plist */,
@@ -129,6 +134,31 @@
 				2C6EBB862590DCE000036334 /* Info.plist */,
 			);
 			path = HandsOnMapKitUITests;
+			sourceTree = "<group>";
+		};
+		2CC1991725919ACB0015670C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2CC1992A2591AB4E0015670C /* Extension+Double.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2CC1991825919AD50015670C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C6EBB652590DCE000036334 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2CC1991925919AE10015670C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2C6EBB632590DCE000036334 /* ViewController.swift */,
+				2CC1991D2591A03A0015670C /* MainViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +291,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CC1992B2591AB4E0015670C /* Extension+Double.swift in Sources */,
 				2C6EBB642590DCE000036334 /* ViewController.swift in Sources */,
 				2C6EBB602590DCE000036334 /* AppDelegate.swift in Sources */,
 				2C6EBB622590DCE000036334 /* SceneDelegate.swift in Sources */,
 				2C6EBB6A2590DCE000036334 /* HandsOnMapKit.xcdatamodeld in Sources */,
+				2CC1991E2591A03A0015670C /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -425,7 +457,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -441,8 +473,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 665XP63X44;
+				DEVELOPMENT_TEAM = 5538968945;
 				INFOPLIST_FILE = HandsOnMapKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,8 +493,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 665XP63X44;
+				DEVELOPMENT_TEAM = 5538968945;
 				INFOPLIST_FILE = HandsOnMapKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
